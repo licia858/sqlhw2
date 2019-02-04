@@ -15,8 +15,9 @@ SELECT actor_id, first_name, last_name FROM actor WHERE first_name = 'Joe';
 SELECT * FROM actor WHERE actor.last_name LIKE '%GEN%';
 
 ##Find all actors whose last names contain the letters `LI`.
-##This time, order the rows by last name and first name, in that order:  NEED HELP!!
-SELECT * FROM actor WHERE last_name LIKE '%LI%' ;
+##This time, order the rows by last name and first name, in that order: 
+SELECT last_name, first_name  FROM actor WHERE last_name LIKE '%LI%' 
+ORDER BY last_name ASC ;
 
 ##Using `IN`, display the `country_id` and `country` columns of the following countries: Afghanistan, Bangladesh, and China
 SELECT country_id, country FROM country WHERE country IN('Afghanistan','Bangladesh','China');
