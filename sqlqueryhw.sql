@@ -106,7 +106,7 @@ SELECT title
 FROM film
 	JOIN language ON language.language_id = film.language_id
 WHERE language.name = 'english'
-AND film.title LIKE 'K%' OR 'Q%';
+AND film.title LIKE 'Q%' OR film.title LIKE'K%';
 
 ##Use subqueries to display all actors who appear in the film `Alone Trip`.
 SELECT first_name, last_name FROM actor WHERE actor_id IN(
